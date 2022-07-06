@@ -19,14 +19,14 @@ app.use( "/graphql", graphqlHTTP({ schema: schema, rootValue: root, graphiql: tr
 //"NODE_ENV=development nodemon --exec babel-node server.js"
 app.get("/", (req, res) => { res.send("Welcome to ecommerce app"); });
 
-app. listen(4000, () => {
-console. log("Running the GraphQL API server "); });
+// app. listen(4000, () => {
+// console. log("Running the GraphQL API server "); });
 
-/*const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 4000
 
 app.listen(PORT,'0.0.0.0', function() {
   console.log(`Server listening on port ${PORT}`)
-})*/
+})
 
 //API to view all the data in the given table
 app.get("/api/collection/:collection",async (req,res)=>{
